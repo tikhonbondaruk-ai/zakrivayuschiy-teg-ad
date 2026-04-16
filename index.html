@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -11,8 +13,270 @@
     <link rel="stylesheet" href="./styles/animations.css" />
   </head>
   <body class="page">
-    <header class="header"></header>
-    <main></main>
+    <div class="content">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__decorated">
+            <div class="header__decor-left"></div>
+            <div class="header__decor-right"></div>
+          </div>
+          <h1 class="header__logo">Закрывающий тег</h1>
+          <p class="header__title title-decor">блог о&nbsp;том, как учиться верстать</p>
+        </div>
+      </header>
+
+      <main class="main">
+        <!-- Карточка 1 - Старт -->
+        <article class="card">
+          <h2 class="card__title title-decor">Старт. Страх и&nbsp;неопределённость</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-blur" 
+              src="./images/start.jpg" 
+              alt="Размытый рассвет, символ неопределённости"
+              loading="lazy"
+            />
+            <span class="card__label">страх</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Когда я только начинал, казалось, что HTML и CSS — это какой-то древний язык магии. Каждый тег вызывал трепет, а первый успешно закрытый div казался маленькой победой.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 2 - Первые шаги -->
+        <article class="card">
+          <h2 class="card__title title-decor">Первые шаги. Эйфория</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-brightness" 
+              src="./images/first-steps.jpg" 
+              alt="Яркий солнечный свет, символ эйфории"
+              loading="lazy"
+            />
+            <span class="card__label">эйфория</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Первый сверстанный макет — это было невероятное чувство! Кажется, я мог сверстать что угодно. Flexbox стал моим лучшим другом, а Grid открыл новые горизонты.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 3 - Столкновение с реальностью -->
+        <article class="card">
+          <h2 class="card__title title-decor">Столкновение с&nbsp;реальностью</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-contrast" 
+              src="./images/reality.jpg" 
+              alt="Резкий контраст, символ трудностей"
+              loading="lazy"
+            />
+            <span class="card__label">боль</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Адаптивность оказалась сложнее, чем я думал. Почему блок ломается на мобилке? Что не так с этими пикселями? Браузерные инструменты стали моим вторым домом.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 4 - Позиционирование -->
+        <article class="card">
+          <h2 class="card__title title-decor">Позиционирование. Абсолютный хаос</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-grayscale" 
+              src="./images/position.jpg" 
+              alt="Черно-белый хаос, символ запутанности"
+              loading="lazy"
+            />
+            <span class="card__label">хаос</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Relative, absolute, fixed... Поначалу казалось, что элементы живут своей жизнью. Но когда я понял логику позиционирования, мир верстки открылся заново.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 5 - Формы -->
+        <article class="card">
+          <h2 class="card__title title-decor">Формы. Магия ввода</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-sepia" 
+              src="./images/forms.jpg" 
+              alt="Винтажная магия, символ открытий"
+              loading="lazy"
+            />
+            <span class="card__label">открытие</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Инпуты, чекбоксы, радио-кнопки — сколько всего интересного! А валидация форм? Это как детективная игра, где нужно поймать все ошибки.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 6 - CSS Grid -->
+        <article class="card">
+          <h2 class="card__title title-decor">Grid. Новая эра</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image-filter-multiple" 
+              src="./images/grid.jpg" 
+              alt="Сетка как порядок"
+              loading="lazy"
+            />
+            <span class="card__label">порядок</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Когда я открыл для себя Grid, мир стал другим. Двумерные сетки, явное размещение — теперь я мог создавать сложные макеты без танцев с бубном.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 7 - Анимации -->
+        <article class="card">
+          <h2 class="card__title title-decor">Анимации. Жизнь в движении</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image filter-hue-rotate" 
+              src="./images/animation.jpg" 
+              alt="Цветной взрыв эмоций"
+              loading="lazy"
+            />
+            <span class="card__label">радость</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Transitions, keyframes, transforms — сайт ожил! Появилась душа, движение, характер. Наблюдать за плавными эффектами — отдельный кайф.</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Карточка 8 - Финал -->
+        <article class="card">
+          <h2 class="card__title title-decor">Финал. Я это сделал!</h2>
+          <div class="card__image-wrapper">
+            <img 
+              class="card__image-filter-multiple" 
+              src="./images/finish.jpg" 
+              alt="Свет в конце тоннеля"
+              loading="lazy"
+            />
+            <span class="card__label">гордость</span>
+          </div>
+          <div class="card__content">
+            <p class="card__text">Оглядываясь назад, я понимаю: каждый закрытый тег, каждая победа над багом — это шаг к мастерству. И это только начало большого пути в мир веб-разработки!</p>
+            <div class="card__buttons">
+              <button class="card__like-button button" type="button">
+                <span class="button__text">Like</span>
+              </button>
+              <button class="card__save-button button" type="button">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                  <use href="./svg/disk.svg#disk"></use>
+                </svg>
+                <span class="button__text">Сохранить на память</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__container">
+          <div class="footer__decorated">
+            <div class="footer__decor-left"></div>
+            <div class="footer__decor-right"></div>
+          </div>
+          <h2 class="footer__logo">Закрывающий тег</h2>
+          <p class="footer__title title-decor">блог о&nbsp;том, как учиться верстать</p>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Диалог -->
+    <dialog class="dialog" id="save-dialog">
+      <div class="dialog__container">
+        <div class="dialog__icon">
+          <svg width="39" height="39" viewBox="0 0 39 39" fill="none">
+            <use href="./svg/disk.svg#disk"></use>
+          </svg>
+        </div>
+        <p class="dialog__text">Успешно сохранено!</p>
+      </div>
+      <button class="dialog__button button" type="button">Ок</button>
+    </dialog>
+
+    <!-- Кнопка Like (сердце) для каждой карточки будет вставлена через JS -->
     <script src="./scripts/like.js"></script>
   </body>
 </html>
