@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./svg/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -16,24 +16,44 @@
     <div class="content">
       <header class="header">
         <div class="header__container">
+          <!-- Кнопки переключения тем -->
+          <nav class="header__theme-menu">
+            <ul class="header__theme-menu-list">
+              <li class="header__theme-menu-item">
+                <button class="header__theme-menu-button" type="button">День</button>
+              </li>
+              <li class="header__theme-menu-item">
+                <button class="header__theme-menu-button header__theme-menu-button_active" type="button">Неон</button>
+              </li>
+              <li class="header__theme-menu-item">
+                <button class="header__theme-menu-button" type="button">Авто</button>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Декоративные уголки -->
           <div class="header__decorated">
             <div class="header__decor-left"></div>
             <div class="header__decor-right"></div>
           </div>
+
           <h1 class="header__logo">Закрывающий тег</h1>
           <p class="header__title title-decor">блог о&nbsp;том, как учиться верстать</p>
         </div>
       </header>
 
       <main class="main">
-        <!-- Карточка 1 - Старт -->
+        <!-- Карточка 1 -->
         <article class="card">
-          <h2 class="card__title title-decor">Старт. Страх и&nbsp;неопределённость</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Старт. Страх и&nbsp;неопределённость</h2>
+            <time class="card__date" datetime="2024-01-15">15.01.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-blur" 
               src="./images/start.jpg" 
-              alt="Размытый рассвет, символ неопределённости"
+              alt="Размытый рассвет, символ неопределённости на пути обучения"
               loading="lazy"
             />
             <span class="card__label">страх</span>
@@ -41,11 +61,23 @@
           <div class="card__content">
             <p class="card__text">Когда я только начинал, казалось, что HTML и CSS — это какой-то древний язык магии. Каждый тег вызывал трепет, а первый успешно закрытый div казался маленькой победой.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
               <button class="card__save-button button" type="button">
-                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use href="./svg/disk.svg#disk"></use>
                 </svg>
                 <span class="button__text">Сохранить на память</span>
@@ -54,14 +86,17 @@
           </div>
         </article>
 
-        <!-- Карточка 2 - Первые шаги -->
+        <!-- Карточка 2 -->
         <article class="card">
-          <h2 class="card__title title-decor">Первые шаги. Эйфория</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Первые шаги. Эйфория</h2>
+            <time class="card__date" datetime="2024-01-22">22.01.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-brightness" 
               src="./images/first-steps.jpg" 
-              alt="Яркий солнечный свет, символ эйфории"
+              alt="Яркий солнечный свет, символ эйфории от первых успехов"
               loading="lazy"
             />
             <span class="card__label">эйфория</span>
@@ -69,6 +104,18 @@
           <div class="card__content">
             <p class="card__text">Первый сверстанный макет — это было невероятное чувство! Кажется, я мог сверстать что угодно. Flexbox стал моим лучшим другом, а Grid открыл новые горизонты.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -82,14 +129,17 @@
           </div>
         </article>
 
-        <!-- Карточка 3 - Столкновение с реальностью -->
+        <!-- Карточка 3 -->
         <article class="card">
-          <h2 class="card__title title-decor">Столкновение с&nbsp;реальностью</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Столкновение с&nbsp;реальностью</h2>
+            <time class="card__date" datetime="2024-02-05">05.02.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-contrast" 
               src="./images/reality.jpg" 
-              alt="Резкий контраст, символ трудностей"
+              alt="Резкий контраст, символ трудностей на пути обучения"
               loading="lazy"
             />
             <span class="card__label">боль</span>
@@ -97,6 +147,18 @@
           <div class="card__content">
             <p class="card__text">Адаптивность оказалась сложнее, чем я думал. Почему блок ломается на мобилке? Что не так с этими пикселями? Браузерные инструменты стали моим вторым домом.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -110,14 +172,17 @@
           </div>
         </article>
 
-        <!-- Карточка 4 - Позиционирование -->
+        <!-- Карточка 4 -->
         <article class="card">
-          <h2 class="card__title title-decor">Позиционирование. Абсолютный хаос</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Позиционирование. Абсолютный хаос</h2>
+            <time class="card__date" datetime="2024-02-20">20.02.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-grayscale" 
               src="./images/position.jpg" 
-              alt="Черно-белый хаос, символ запутанности"
+              alt="Черно-белый хаос, символ запутанности в позиционировании"
               loading="lazy"
             />
             <span class="card__label">хаос</span>
@@ -125,6 +190,18 @@
           <div class="card__content">
             <p class="card__text">Relative, absolute, fixed... Поначалу казалось, что элементы живут своей жизнью. Но когда я понял логику позиционирования, мир верстки открылся заново.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -138,14 +215,17 @@
           </div>
         </article>
 
-        <!-- Карточка 5 - Формы -->
+        <!-- Карточка 5 -->
         <article class="card">
-          <h2 class="card__title title-decor">Формы. Магия ввода</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Формы. Магия ввода</h2>
+            <time class="card__date" datetime="2024-03-10">10.03.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-sepia" 
               src="./images/forms.jpg" 
-              alt="Винтажная магия, символ открытий"
+              alt="Винтажная магия, символ открытий в мире форм"
               loading="lazy"
             />
             <span class="card__label">открытие</span>
@@ -153,6 +233,18 @@
           <div class="card__content">
             <p class="card__text">Инпуты, чекбоксы, радио-кнопки — сколько всего интересного! А валидация форм? Это как детективная игра, где нужно поймать все ошибки.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -166,14 +258,17 @@
           </div>
         </article>
 
-        <!-- Карточка 6 - CSS Grid -->
+        <!-- Карточка 6 -->
         <article class="card">
-          <h2 class="card__title title-decor">Grid. Новая эра</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Grid. Новая эра</h2>
+            <time class="card__date" datetime="2024-03-25">25.03.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
-              class="card__image-filter-multiple" 
+              class="card__image filter-multiple" 
               src="./images/grid.jpg" 
-              alt="Сетка как порядок"
+              alt="Сетка как порядок, символ новой эры в верстке"
               loading="lazy"
             />
             <span class="card__label">порядок</span>
@@ -181,6 +276,18 @@
           <div class="card__content">
             <p class="card__text">Когда я открыл для себя Grid, мир стал другим. Двумерные сетки, явное размещение — теперь я мог создавать сложные макеты без танцев с бубном.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -194,14 +301,17 @@
           </div>
         </article>
 
-        <!-- Карточка 7 - Анимации -->
+        <!-- Карточка 7 -->
         <article class="card">
-          <h2 class="card__title title-decor">Анимации. Жизнь в движении</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Анимации. Жизнь в движении</h2>
+            <time class="card__date" datetime="2024-04-12">12.04.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
               class="card__image filter-hue-rotate" 
               src="./images/animation.jpg" 
-              alt="Цветной взрыв эмоций"
+              alt="Цветной взрыв эмоций, символ радости от анимаций"
               loading="lazy"
             />
             <span class="card__label">радость</span>
@@ -209,6 +319,18 @@
           <div class="card__content">
             <p class="card__text">Transitions, keyframes, transforms — сайт ожил! Появилась душа, движение, характер. Наблюдать за плавными эффектами — отдельный кайф.</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -222,14 +344,17 @@
           </div>
         </article>
 
-        <!-- Карточка 8 - Финал -->
+        <!-- Карточка 8 -->
         <article class="card">
-          <h2 class="card__title title-decor">Финал. Я это сделал!</h2>
+          <div class="card__header">
+            <h2 class="card__title title-decor">Финал. Я это сделал!</h2>
+            <time class="card__date" datetime="2024-05-01">01.05.2024</time>
+          </div>
           <div class="card__image-wrapper">
             <img 
-              class="card__image-filter-multiple" 
+              class="card__image filter-multiple" 
               src="./images/finish.jpg" 
-              alt="Свет в конце тоннеля"
+              alt="Свет в конце тоннеля, символ достижения цели"
               loading="lazy"
             />
             <span class="card__label">гордость</span>
@@ -237,6 +362,18 @@
           <div class="card__content">
             <p class="card__text">Оглядываясь назад, я понимаю: каждый закрытый тег, каждая победа над багом — это шаг к мастерству. И это только начало большого пути в мир веб-разработки!</p>
             <div class="card__buttons">
+              <button class="card__icon-button" type="button">
+                <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none">
+                  <g class="heart">
+                    <path class="contour" d="M19.5 35C19.5 35 2 24 2 13C2 6 7 2 12 2C17 2 19.5 7 19.5 7C19.5 7 22 2 27 2C32 2 37 6 37 13C37 24 19.5 35 19.5 35Z" stroke="var(--contour-color)" fill="none"/>
+                    <path class="main-body" d="M19.5 33C19.5 33 5 23.5 5 13.5C5 7.5 9 4.5 13 4.5C17 4.5 19.5 9 19.5 9C19.5 9 22 4.5 26 4.5C30 4.5 34 7.5 34 13.5C34 23.5 19.5 33 19.5 33Z" fill="none"/>
+                    <path class="core" d="M19.5 27C19.5 27 12 21 12 15C12 12 14 10.5 16 10.5C18 10.5 19.5 13 19.5 13C19.5 13 21 10.5 23 10.5C25 10.5 27 12 27 15C27 21 19.5 27 19.5 27Z" fill="none"/>
+                  </g>
+                  <g class="sparks">
+                    <path class="spark" d="M19.5 2L20.5 5L22 3L20.5 6L23 5L21 7.5L24 7L22 9L25 9.5L22.5 11L26 11L24 12.5L27 12L25 14" stroke="var(--animation-fill-color)" fill="none"/>
+                  </g>
+                </svg>
+              </button>
               <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
@@ -259,11 +396,17 @@
           </div>
           <h2 class="footer__logo">Закрывающий тег</h2>
           <p class="footer__title title-decor">блог о&nbsp;том, как учиться верстать</p>
+          <button class="footer__save-button button" type="button">
+            <svg class="save-icon" width="21" height="21" viewBox="0 0 21 21" fill="none">
+              <use href="./svg/disk.svg#disk"></use>
+            </svg>
+            <span class="button__text">Сохранить на память</span>
+          </button>
         </div>
       </footer>
     </div>
 
-    <!-- Диалог -->
+    <!-- Модальное окно -->
     <dialog class="dialog" id="save-dialog">
       <div class="dialog__container">
         <div class="dialog__icon">
@@ -276,7 +419,6 @@
       <button class="dialog__button button" type="button">Ок</button>
     </dialog>
 
-    <!-- Кнопка Like (сердце) для каждой карточки будет вставлена через JS -->
     <script src="./scripts/like.js"></script>
   </body>
 </html>
