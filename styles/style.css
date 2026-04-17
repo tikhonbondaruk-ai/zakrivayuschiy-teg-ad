@@ -13,4 +13,406 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-main), monospace;
+  font-size: var(--text-size);
+  line-height: 1.5;
+  font-variation-settings: 'wght' var(--text-weight);
+}
+
+/* Контейнер основного контента */
+.content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ========== ШАПКА ========== */
+.header {
+  margin-bottom: 40px;
+}
+
+.header__container {
+  position: relative;
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+/* Декоративные уголки */
+.header__decorated {
+  position: relative;
+}
+
+.header__decor-left,
+.header__decor-right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.header__decor-left {
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+}
+
+.header__decor-right {
+  top: 0;
+  right: 0;
+  border-top: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+}
+
+/* Кнопки переключения тем */
+.header__theme-menu {
+  margin-bottom: 40px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  font-family: var(--font-accent), monospace;
+  font-size: 14px;
+  color: var(--text-color);
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.header__theme-menu-button:hover {
+  opacity: 0.6;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
+.header__theme-menu-button_active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+}
+
+/* Логотип */
+.header__logo {
+  font-family: var(--font-accent), monospace;
+  font-size: var(--logo-size);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.header__title {
+  font-family: var(--font-accent), monospace;
+  font-size: 14px;
+  display: inline-block;
+}
+
+/* ========== ОСНОВНОЙ КОНТЕНТ ========== */
+.main {
+  margin-bottom: 40px;
+}
+
+/* ========== КАРТОЧКИ ========== */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.card:last-child {
+  margin-bottom: 0;
+}
+
+.card__header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.card__title {
+  font-family: var(--font-accent), monospace;
+  font-size: clamp(1.2rem, 0.8rem + 1.5vw, 1.8rem);
+  margin-bottom: 8px;
+  display: inline-block;
+}
+
+.card__date {
+  font-family: var(--font-accent), monospace;
+  font-size: 12px;
+  color: var(--text-color);
+  opacity: 0.7;
+}
+
+/* Обёртка для изображения */
+.card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+/* Лейбл на картинке */
+.card__label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: var(--font-accent), monospace;
+  font-size: 12px;
+  color: var(--label-text);
+  background-color: var(--accent-color);
+  padding: 4px 8px;
+  mix-blend-mode: hard-light;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px var(--label-stroke);
+  text-stroke: 1px var(--label-stroke);
+}
+
+/* Фолбэк для браузеров без text-stroke */
+@supports not (text-stroke: 1px var(--label-stroke)) and not (-webkit-text-stroke: 1px var(--label-stroke)) {
+  .card__label {
+    text-shadow: 1px 1px 0 var(--label-stroke);
+  }
+}
+
+/* Контент карточки */
+.card__content {
+  padding: 20px;
+}
+
+.card__text {
+  font-family: var(--font-main), monospace;
+  font-size: var(--text-size);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* Кнопки карточки */
+.card__buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+/* Кнопка-обёртка для иконки сердца */
+.card__icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background-color: transparent;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+/* Общие стили для кнопок */
+.button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-family: var(--font-accent), monospace;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* Псевдоэлемент для анимации наведения */
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 0;
+}
+
+.button:hover::before {
+  transform: translateX(0);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  color: var(--button-text);
+}
+
+/* Иконка дискеты */
+.save-icon {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+  fill: var(--button-text);
+  width: 21px;
+  height: 21px;
+}
+
+/* ========== ФУТЕР ========== */
+.footer {
+  margin-top: 40px;
+}
+
+.footer__container {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer__logo {
+  font-family: var(--font-accent), monospace;
+  font-size: var(--logo-size);
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.footer__title {
+  font-family: var(--font-accent), monospace;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.footer__save-button {
+  margin: 0 auto;
+}
+
+/* Декоративные уголки в футере */
+.footer__decor-left,
+.footer__decor-right {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+
+.footer__decor-left {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid var(--accent-color);
+  border-left: 2px solid var(--accent-color);
+}
+
+.footer__decor-right {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid var(--accent-color);
+  border-right: 2px solid var(--accent-color);
+}
+
+/* ========== ФИЛЬТРЫ ДЛЯ ИЗОБРАЖЕНИЙ ========== */
+.filter-blur {
+  filter: blur(2px);
+}
+
+.filter-brightness {
+  filter: brightness(1.3);
+}
+
+.filter-contrast {
+  filter: contrast(1.5);
+}
+
+.filter-grayscale {
+  filter: grayscale(0.7);
+}
+
+.filter-sepia {
+  filter: sepia(0.8);
+}
+
+.filter-hue-rotate {
+  filter: hue-rotate(90deg);
+}
+
+.filter-multiple {
+  filter: brightness(1.1) contrast(1.2) saturate(1.3);
+}
+
+/* ========== МЕДИАЗАПРОСЫ ========== */
+
+/* Планшет и десктоп (ширина > 768px) */
+@media (width > 768px) {
+  .card__buttons {
+    justify-content: flex-end;
+  }
+}
+
+/* Мобильные устройства (ширина <= 375px) */
+@media (width <= 375px) {
+  .header__logo,
+  .footer__logo {
+    font-size: clamp(2rem, 1.5rem + 2vw, 2.5rem);
+  }
+
+  .card__title {
+    font-size: 1.2rem;
+  }
+
+  .card__buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .button {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+
+  .header__theme-menu-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
