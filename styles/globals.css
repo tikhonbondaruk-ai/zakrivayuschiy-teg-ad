@@ -10,6 +10,13 @@
 
 body {
   margin: 0;
+  min-height: 100dvb;
+  font-family: var(--font-main), monospace;
+  font-size: var(--text-size);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  font-variation-settings: 'wght' var(--text-weight);
 }
 
 h1,
@@ -28,6 +35,7 @@ li {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 button,
@@ -42,6 +50,14 @@ ol {
   list-style: none;
 }
 
+img,
+svg,
+picture {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
@@ -50,4 +66,29 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+/* Дополнительные глобальные стили для проекта */
+
+/* Контейнер основного контента */
+.content {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Базовые стили для карточек */
+.card {
+  max-width: var(--card-width);
+  margin: 0 auto 40px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+}
+
+/* Декоративный класс для текста на цветном фоне */
+.title-decor {
+  background-color: var(--accent-color);
+  color: var(--label-text);
+  padding: 4px 8px;
+  display: inline-block;
 }
