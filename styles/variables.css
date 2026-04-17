@@ -1,1 +1,59 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  /* ========== ШРИФТЫ ========== */
+  --font-main: 'Inter';
+  --font-accent: 'PressStart2P';
+  
+  /* ========== РАЗМЕРЫ ШРИФТОВ ========== */
+  --text-size: 18px;
+  --text-weight: 400;
+  --title-weight: 700;
+  --card-title-weight: 700;
+  
+  /* Логотип и заголовки (адаптивные) */
+  --logo-size: clamp(3rem, 0.5625rem + 14.4531vw, 4rem);
+  --title-size: clamp(2.5rem, 0.5625rem + 14.4531vw, 3.5rem);
+  
+  /* ========== ОТСТУПЫ И РАЗМЕРЫ ========== */
+  --container-width: min(100% - 40px, 1200px);
+  --card-width: min(100% - 40px, 800px);
+  
+  /* ========== ЦВЕТА (ТЁМНАЯ ТЕМА ПО УМОЛЧАНИЮ) ========== */
+  --bg-color: #000000;
+  --text-color: #f1f1f1;
+  --accent-color: #ff0070;
+  --button-bg: #000000;
+  --button-text: #f1f1f1;
+  --border-color: #333333;
+  --card-bg: #111111;
+  --label-text: #000000;
+  --label-stroke: #ffffff;
+  
+  /* ========== ЦВЕТА ДЛЯ АНИМАЦИИ СЕРДЦА ========== */
+  --contour-color: #f1f1f1;
+  --animation-fill-color: #ff0000;
+  
+  /* ========== ФОН ========== */
+  --bg-image: url(../images/bg-dark.jpg);
+  
+  /* ========== ТЕНИ ========== */
+  --shadow: 4px 4px 0 var(--accent-color);
+}
+
+/* ========== ПЕРЕОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ДЛЯ ПЛАНШЕТА И ДЕСКТОПА ========== */
+@media (width > 768px) {
+  :root {
+    --container-width: min(100% - 60px, 1200px);
+    --card-width: min(100% - 60px, 800px);
+  }
+}
+
+/* ========== ПЕРЕОПРЕДЕЛЕНИЕ ПЕРЕМЕННЫХ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ========== */
+@media (width <= 375px) {
+  :root {
+    --container-width: min(100% - 20px, 1200px);
+    --card-width: min(100% - 20px, 800px);
+    --text-size: 16px;
+  }
+}
